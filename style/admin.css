@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Modal add */
+.modal-add{
+    position: fixed;
+    display: none;
+    width: 60%;
+    height: 70%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25); 
+    box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25);
+    border-radius: 30px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow-y: scroll;
+    left: 20%;
+    top: 10%;
+}
+
+.save-btn{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 2.5rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #28156e;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.save-btn:hover{
+    transition: linear .3s;
+    cursor: pointer;
+}
+
+.save-btn span{
+    position: absolute;
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+
+.close-btn{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 2.5rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #a31e17;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.close-btn:hover{
+    transition: linear .3s;
+    cursor: pointer;
+}
+
+.close-btn span{
+    position: absolute;
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+
+.modal-add::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.modal-add::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  .modal-add::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 30px;
+    
+  }
+  .modal-add::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  .modal-add::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  .modal-add::-webkit-scrollbar-track {
+    background: #161616;
+    border: 0px none #ffffff;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .modal-add::-webkit-scrollbar-track:hover {
+    background: #161616;
+  }
+  .modal-add::-webkit-scrollbar-track:active {
+    background: #1a1a1a;
+  }
+  .modal-add::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+
+.inputs-area{
+    margin: 2rem 2rem 2rem 15rem;
+}
+
+.label-picture{
+    width: 50px;
+    height: 50px;
+    background-color: cadetblue;
+    padding: 50px;
+    border-radius: 100%;
+    position: absolute;
+    transform: translateX(-13rem);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.picture-input{
+    display: none;
+}
+
+.modal-add label{
+    font-size: 9pt;
+    margin-left: 1rem;
+    font-weight: bolder;
+}
+
+.modal-add input{
+    width: 150px;
+    height: 20px;
+    border-radius: 30px;
+    border-style: solid;
+    padding-left: 4px;
+    margin: 0rem .5rem .5rem .5rem;
+}
+
+.modal-add select{
+    width: 150px;
+    height: 20px;
+    border-radius: 30px;
+    border-style: solid;
+    margin: .1rem .5rem .5rem .5rem;
+}
+
+/*----------*/
+
+/* Interface */
+
+.insert{
+    margin-top: 2rem;
+}
+
+.insert .options{
+    display: inline-flex;
+    margin-left: 45%;
+}
+
+.insert .options .add-member{
+    width: 200px;
+    height: 40px;
+    font-weight: bolder;
+    color: #ffffff;
+    background-color: rgb(147, 204, 60);
+    border-radius: 30px;
+}
+
+.insert .options .add-member:hover{
+    cursor: pointer;
+    transition: linear .3s;
+    background-color: rgb(114, 160, 46);
+}
+
+.insert .options .add-member span{
+    position: absolute;
+    transform: translate(-70px, 9px);
+}
+
+/* List */
+.members-list-area{
+    margin-top: 1rem;
+}
+
+.list-subtitle{
+    list-style: none;
+    display: inline-flex;
+    background-color: #28156e;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 9pt;
+    width: 843px;
+    border-color: #000000;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+}
+
+.list-subtitle hr{
+    margin-right: .5rem;
+    color: #ffffff;
+}
+
+.list-subtitle li{
+    margin-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.list-subtitle .photo-title{
+    width: 47px;
+}
+
+.list-subtitle .name-title{
+    width: 243px;
+}
+
+.list-subtitle .cargo-title{
+    width: 89px;
+}
+
+.list-subtitle .cargo-adm-title{
+    width: 79px;
+}
+
+.list-subtitle .nascimento-title{
+    width: 82px;
+}
+
+.list-subtitle .batismo-title{
+    width: 82px;
+}
+
+.list-subtitle .contato-title{
+    width: 103px;
+}
+
+.geral-list{
+    list-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: #000000;
+
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #000000;
+
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #000000;
+
+    background-color: rgb(243, 243, 243);
+    width: 843px;
+}
+
+.members-list-area .geral-list .member-column{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.members-list-area .member-ul{
+    list-style: none;
+    display: inline-flex;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-weight: bolder;
+    font-size: 10pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.members-list-area .member-ul hr{
+    margin-right: .5rem;
+}
+
+.members-list-area .member-ul li{
+    margin-right: .5rem;
+    padding-top: .5rem;
+    
+}
+
+.members-list-area .member-ul .picture-li{
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-left: .5rem;
+}
+
+.members-list-area .member-ul li .user-picture{
+    width: 40px;
+    height: 40px;
+    background-color: #161616;
+    border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.members-list-area .member-ul .name-li{
+    width: 243px;
+}
+
+.members-list-area .member-ul .cargo-li{
+   width: 89px;
+}
+
+.members-list-area .member-ul .cargo-adm-li{
+    width: 79px;
+ }
+
+.members-list-area .member-ul .nascimento-li{
+    width: 82px;
+} 
+
+.members-list-area .member-ul .batismo-li{
+    width: 82px;
+} 
+
+.members-list-area .member-ul .contato-li{
+    width: 103px;
+} 
+
+/* ---------- */

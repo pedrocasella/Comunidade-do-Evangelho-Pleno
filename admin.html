@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/admin.css">
+    <script src="./script/admin.js"></script>
+    <title>Painel Administrativo</title>
+</head>
+<body>
+    <section class="insert">
+        <center>
+            <ul class="options">
+                <li class="add-member" id="add-member"><span>Adicionar Membro</span></li>
+            </ul>
+        </center>
+    </section>
+    <div class="modal-add" id="modal-add">
+        <div class="save-btn" id="save-btn"><span>Salvar</span></div>
+        <div class="close-btn" id="close-btn"><span>Fechar</span></div>
+        <div class="inputs-area">
+            <label for="picture-input" class="label-picture" id="label-picture"></label>
+            <input type="file" name="" id="picture-input" class="picture-input"><br>
+            <label>Nome Completo:</label><br>
+            <input type="text" name="nome" id="nome-input" class="nome-input" placeholder="Nome Completo"><br>
+            <label>RG - Registro Cívil:</label><br>
+            <input type="text" name="" id="identidade-input" class="identidade-input" placeholder="Registro Civíl"><br>
+            <label>CPF:</label><br>
+            <input type="text" name="" id="cpf-input" class="cpf-input" placeholder="CPF"><br>
+            <label>Estado Civíl:</label><br>
+            <select name="estado civil" id="estadoCivil-input" class="estadoCivil-input">
+                <option value="N/A">N/A</option>
+                <option value="Solteiro(a)">Solteiro(a)</option>
+                <option value="Namorando">Namorando</option>
+                <option value="Noivo(a)">Noivo(a)</option>
+                <option value="Casado(a)">Casado(a)</option>
+            </select><br>
+            <label>Cargo:</label><br>
+            <select name="cargo" id="cargo-input" class="cargo-input">
+                <option value="N/A">N/A</option>
+                <option value="Membro">Membro</option>
+                <option value="Pastor">Pastor</option>
+                <option value="Pastora">Pastora</option>
+                <option value="Presbítero">Presbítero</option>
+                <option value="Missionário">Missionário</option>
+                <option value="Missionária">Missionária</option>
+                <option value="Evangelista">Evangelista</option>
+                <option value="Diácono">Diácono</option>
+                <option value="Diaconiza">Diaconiza</option>
+                <option value="Obreiro">Obreiro</option>
+                <option value="Obreira">Obreira</option>
+            </select><br>
+            <label>Cargo Administrativo:</label><br>
+            <select name="adm" id="adm-input" class="adm-input">
+                <option value="N/A">N/A</option>
+                <option value="Secretário">Secretário</option>
+                <option value="Secretária">Secretária</option>
+                <option value="Secretário-Geral">Secretário-Geral</option>
+                <option value="Secretárioa-Geral">Secretária-Geral</option>
+                <option value="Tesoureira">Tesoureira</option>
+                <option value="Tesoureiro">Tesoureiro</option>
+                <option value="Contador">Contador</option>
+                <option value="Contadora">Contadora</option>
+            </select><br>
+            <label>Ministério:</label><br>
+            <input type="text" name="ministerio" id="ministerio-input" class="ministerio-input" placeholder="Ministério"><br>
+            <label>Função Ministerial:</label><br>
+            <input type="text" name="ministerio" id="funcMinisterial-input" class="funcMinisterial-input" placeholder="Função Ministerial"><br>
+            <label>Data de Nascimento:</label><br>
+            <input type="date" name="nascimento" id="nascimento-input" class="nascimento-input"><br>
+            <label>Data de Batismo:</label><br>
+            <input type="date" name="batismo" id="batismo-input" class="batismo-input"><br>
+            <label>Contato:</label><br>
+            <input type="tel" name="telefone" id="telefone-input" class="telefone-input" placeholder="Telefone"><br>
+            <label>Endereço:</label><br>
+            <input type="text" name="" id="endereco-input" class="endereco-input" placeholder="Endereço"><br>
+            <label>Nome de Preferência</label><br>
+            <input type="text" name="" id="prefName-input" class="prefName-input" placeholder="Nome de Preferência">
+        </div>
+    </div>
+    <section class="members-list-area" id="member-list-area">
+        <center>
+            <ul class="list-subtitle">
+                <li class="photo-title">Foto</li><hr>
+                <li class="name-title">Nome</li><hr>
+                <li class="cargo-title">Cargo</li><hr>
+                <li class="cargo-adm-title">Cargo Adm</li><hr>
+                <li class="nascimento-title">Data de Nasc.</li><hr>
+                <li class="batismo-title">Data de Batis.</li><hr>
+                <li class="contato-title">Contato</li>
+            </ul>
+            <ul class="geral-list" id="geral-list">
+                <!--<li class="member-column">
+                    <ul class="member-ul">
+                        <li class="picture-li"><div class="user-picture"></div></li><hr>
+                        <li class="name-li"></li><hr>
+                        <li class="cargo-li"></li><hr>
+                        <li class="cargo-adm-li"></li><hr>
+                        <li class="nascimento-li"></li><hr>
+                        <li class="batismo-li"></li><hr>
+                        <li class="contato-li"></li>
+                    </ul>
+                </li>-->
+            </ul>
+        </center>
+    </section>
+   
+    <script type="module" src="./script/data.js"></script>
+</body>
+</html>
