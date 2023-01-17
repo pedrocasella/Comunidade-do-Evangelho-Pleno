@@ -33,4 +33,19 @@ get(child(dbRef, "birthday/")).then((snapshot) => {
     console.error(error);
 });
 
+setTimeout(()=>{
+  var date = new Date().getMonth() + 1
+  if(date < 10){
+    var month = '0' + date
+  }else{
+    var month = date + ''
+  }
+  document.querySelectorAll('.info-ul').forEach((snapshot)=>{
+    if(snapshot.innerHTML.indexOf('/' + month + '/') == -1){
+      snapshot.style.display = 'none'
+    }
+  })
+}, 1000*5)
+
+
 

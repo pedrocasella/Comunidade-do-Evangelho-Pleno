@@ -69,3 +69,24 @@ function getImage(){
 }
 setInterval(getImage, 100*5)
 
+//Open ID Card
+
+function openId(){
+    document.getElementById('id-card').style.display = 'block'
+    document.getElementById('background-black').style.display = 'block'
+    document.getElementById('close').style.display = 'block'
+}
+
+//Open delete area
+function deleteWindow(){
+    setTimeout(()=>{
+        document.getElementById('delete-modal').style.display = 'block'
+        document.getElementById('background-black').style.display = 'block'
+        document.getElementById('close').style.display = 'none'
+    }, 1000*1)
+}
+
+
+
+
+
