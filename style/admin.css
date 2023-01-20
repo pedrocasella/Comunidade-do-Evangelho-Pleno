@@ -4,6 +4,34 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Animations */
+
+@keyframes openUp {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes openLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*------------*/
+
 
 header{
     width: 100%;
@@ -32,9 +60,13 @@ nav ul li:hover{
     cursor: pointer;
     transition: linear .3s;
     background-color: #ffffff3d;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #ffffff;
+}
+
+.bar-select-list{
+    width: 101.13px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateX(-146px);
 }
 
 /* Modal add */
@@ -53,6 +85,7 @@ nav ul li:hover{
     left: 20%;
     top: 10%;
     z-index: 4;
+    animation: openLeft .3s ease-in;
 }
 
 .save-btn{
@@ -146,14 +179,21 @@ nav ul li:hover{
 .label-picture{
     width: 50px;
     height: 50px;
-    background-color: cadetblue;
+    background-color: rgb(113, 181, 184);
     padding: 50px;
     border-radius: 100%;
     position: absolute;
     transform: translateX(-13rem);
+    background-image: url(./../icon/picture.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.label-picture:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: rgb(148, 229, 233);
 }
 
 .picture-input{
@@ -189,11 +229,37 @@ nav ul li:hover{
 
 .insert{
     margin-top: 2rem;
+    animation: openUp .3s ease-in;
 }
 
 .insert .options{
     display: inline-flex;
-    margin-left: 45%;
+    margin-left: 40%;
+    list-style: none;
+}
+
+.insert .options .active{
+    padding: .5rem;
+    margin-left: 2rem;
+    border-width: .5px;
+    border-color: #000000;
+    background-color: #28156e;
+    border-style: solid;
+    font-size: 10pt;
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.insert .options .inactive{
+    cursor: pointer;
+    padding: .5rem;
+    margin-right: 2rem;
+    border-width: .5px;
+    border-color: #000000;
+    border-style: solid;
+    font-size: 10pt;
+    font-weight: bolder;
 }
 
 .insert .options .add-member{
@@ -202,6 +268,10 @@ nav ul li:hover{
     font-weight: bolder;
     color: #ffffff;
     background-color: rgb(147, 204, 60);
+    background-image: url(./../icon/add-user.png);
+    background-repeat: no-repeat;
+    background-position: 165px 8px;
+    background-size: 20px;
     border-radius: 30px;
 }
 
@@ -213,12 +283,13 @@ nav ul li:hover{
 
 .insert .options .add-member span{
     position: absolute;
-    transform: translate(-70px, 9px);
+    transform: translate(-80px, 9px);
 }
 
 /* List */
 .members-list-area{
     margin-top: 1rem;
+    animation: openUp .3s ease-in;
 }
 
 .list-subtitle{
@@ -253,6 +324,10 @@ nav ul li:hover{
 
 .list-subtitle .photo-title{
     width: 47px;
+    background-image: url(./../icon/user002.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
 }
 
 .list-subtitle .name-title{
@@ -284,6 +359,11 @@ nav ul li:hover{
 #removed-list{
     opacity: .7;
     display: none;
+    animation: openLeft .3s ease-in;
+}
+
+#removed-list .excluir-li{
+    background-image: url(./../icon/return.png);
 }
 
 /* ------------- */
@@ -304,6 +384,7 @@ nav ul li:hover{
 
     background-color: rgb(243, 243, 243);
     width: 843px;
+    animation: openLeft .3s ease-in;
 }
 
 .members-list-area .geral-list .member-column{
@@ -409,6 +490,28 @@ nav ul li:hover{
     background-size: 32%;
 }
 
+.members-list-area .member-ul .edit-li{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #28156e;
+    background-image: url(./../icon/edit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    padding: 0;
+    margin-top: .3rem;
+    transform: translateX(-40px);
+    opacity: .5;
+}
+
+.members-list-area .member-ul .edit-li:hover{
+    cursor: pointer;
+    transition: linear .3s;
+    opacity: 1;
+}
+
 /* ---------- */
 
 /* ID Card */
@@ -449,6 +552,7 @@ nav ul li:hover{
     top: 20%;
     left: 28%;
     z-index: 3;
+    animation: openLeft .3s ease-in;
 }
 
 .id-card .picture-area{
@@ -663,6 +767,70 @@ nav ul li:hover{
 
 /* ----------- */
 
+/* Return Area */
+
+.return-modal{
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25); 
+    box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25);
+    top: 18%;
+    left: 36%;
+    z-index: 4;
+    text-align: center;
+}
+
+.return-modal h3{
+    margin: 2rem 2rem .5rem 2rem;
+}
+
+.return-modal span{
+    margin: .2rem;
+    font-size: 10pt;
+}
+
+.return-modal ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+.return-modal ul li{
+    width: 100px;
+    height: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin: 2rem;
+    padding-top: .5rem;
+}
+
+.return-modal ul .true-return{
+    background-color: rgb(124, 168, 57);
+    border-radius: 30px;
+}
+
+.return-modal ul .true-return:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: rgb(85, 117, 37);
+}
+
+.return-modal ul .false-return{
+    background-color: #a31e17;
+    border-radius: 30px;
+}
+
+.return-modal ul .false-return:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #75120d;
+}
+
+/* ----------- */
+
 /* Schedule Area */
 
 .schedule{
@@ -779,3 +947,140 @@ nav ul li:hover{
     cursor: pointer;
     background-color: #1d0e53;
 }
+
+/* Log Area */
+
+.log-area{
+    width: 100%;
+    height: auto;
+    display: none;
+    animation: openUp .3s ease-in;
+}
+
+.log-area .log-ul{
+    list-style: none;
+}
+
+.log-area .log-ul .log-users{
+    padding: 2rem 2rem 2rem 2rem;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #000000;
+}
+
+.log-area .log-ul .log-users:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+.log-area .log-ul .log-users .elements{
+    list-style: none;
+}
+
+.log-area .log-ul .log-users .elements li{
+    margin-bottom: .5rem;
+}
+
+.log-area .log-ul .log-users .elements li h2 .icon{
+    padding: 15px;
+    width: 28px;
+    height: 28px;
+    margin-right: .5rem;
+    background-image: url(./../icon/log-users.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+/* ---------- */
+
+/* Edit user area */
+.edit-modal{
+    position: fixed;
+    display: none;
+    width: 300px;
+    height: 70%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25); 
+    box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.25);
+    border-radius: 30px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    left: 20%;
+    top: 10%;
+    z-index: 4;
+    animation: openLeft .3s ease-in;
+    overflow-y: scroll;
+}
+
+.edit-modal span{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 17pt;
+    color: #000000;
+    right: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.edit-modal ul{
+    list-style: none;
+}
+
+.edit-modal ul li{
+    margin: 1rem;
+}
+
+.edit-modal ul li label{
+    font-weight: bolder;
+    font-size: 11pt;
+}
+
+.edit-modal ul li input{
+    border: none;
+    width: 250px;
+    cursor: default;
+}
+
+.edit-modal::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.edit-modal::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+  .edit-modal::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 30px;
+    
+  }
+  .edit-modal::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  .edit-modal::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  .edit-modal::-webkit-scrollbar-track {
+    background: #161616;
+    border: 0px none #ffffff;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .edit-modal::-webkit-scrollbar-track:hover {
+    background: #161616;
+  }
+  .edit-modal::-webkit-scrollbar-track:active {
+    background: #1a1a1a;
+  }
+  .edit-modal::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+/*----------------*/

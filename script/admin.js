@@ -86,7 +86,23 @@ function deleteWindow(){
     }, 1000*1)
 }
 
+//Open return area
+function returnWindow(){
+    setTimeout(()=>{
+        document.getElementById('return-modal').style.display = 'block'
+        document.getElementById('background-black').style.display = 'block'
+        document.getElementById('close').style.display = 'none'
+    }, 1000*1)
+}
 
+//Open edit area
 
+function editWindow(){
+    setTimeout(()=>{
+        document.getElementById('edit-modal').style.display = 'block'
+        document.getElementById('background-black').style.display = 'block'
+        document.getElementById('close').style.display = 'none'
+    }, 1000*1)
+}
 
 

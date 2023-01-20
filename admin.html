@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/admin.css">
+    <link rel="icon" href="./img/logo001.png">
     <script src="./script/admin.js"></script>
     <title>Painel Administrativo</title>
 </head>
@@ -15,16 +16,18 @@
     <nav>
         <center>
             <ul>
-                <li class="list" id="list">Lista</li>
+                <li class="list" id="list">Membros</li>
                 <li class="agenda" id="agenda">Calendário/Agenda</li>
                 <li class="notes" id="notes">Anotações</li>
-            </ul>
+            </ul><hr class="bar-select-list" id="bar-select-list">
         </center>
     </nav>
     <!-- Botões -->
-    <section class="insert">
+    <section class="insert" id="insert">
         <center>
             <ul class="options">
+                <li class="active" id="active"><span>Ativos</span></li>
+                <li class="inactive" id="inactive"><span>Inativos</span></li>
                 <li class="add-member" id="add-member"><span>Adicionar Membro</span></li>
             </ul>
         </center>
@@ -103,7 +106,7 @@
     <section class="members-list-area" id="member-list-area">
         <center>
             <ul class="list-subtitle">
-                <li class="photo-title">Foto</li><hr>
+                <li class="photo-title">.</li><hr>
                 <li class="name-title">Nome</li><hr>
                 <li class="cargo-title">Cargo</li><hr>
                 <li class="cargo-adm-title">Cargo Adm</li><hr>
@@ -112,8 +115,9 @@
                 <li class="contato-title">Contato</li>
             </ul>
             <ul class="geral-list" id="geral-list">
-                <!--<li class="member-column">
+               <!--<li class="member-column">
                     <ul class="member-ul">
+                        <li class="edit-li"></li>
                         <li class="picture-li"><div class="user-picture"></div></li><hr>
                         <li class="name-li"></li><hr>
                         <li class="cargo-li"></li><hr>
@@ -122,8 +126,8 @@
                         <li class="batismo-li"></li><hr>
                         <li class="contato-li"></li><hr>
                         <li class="excluir-li"></li>
-                    </ul>
-                </li>-->
+                    </ul>-->
+                </li>
             </ul>
             <ul class="geral-list" id="removed-list">
                 <!--<li class="member-column">
@@ -191,6 +195,53 @@
             </ul>
         </center>
    </div>
+   <!--------------------->
+
+   <!-- Return Area -->
+   <div class="return-modal" id="return-modal">
+        <h3>Tem certeza que deseja restaurar esse usuário?</h3>
+        <center><span>*(ao restaurá-lo será adicionado no log de usuários, que não poderá ser alterado)</span></center>
+        <ul class="return-ul" id="return-ul">
+            <li class="false-return" id="false-return">Não</li>
+        </ul>
+   </div>
+   <!----------------->
+
+   <!-- Log Area -->
+   <section class="log-area" id="log-area">
+        <ul class="log-ul">
+            <li class="log-users" id="log-uses">
+                <ul class="elements">
+                    <li class="title"><h2><span class="icon"></span>Log de Membros da Igreja</h2></li>
+                    <li><span>Registros de inserção, ativação e desativação de membros da igreja. (Não editável)</span></li>
+                </ul>
+            </li>
+            <li class="church-register" id="church-register">
+
+            </li>
+        </ul>
+   </section>
+   <!-------------->
+
+   <!-- Edit User Area -->
+   <section class="edit-modal" id="edit-modal">
+        <span id="close-edit">X</span>
+            <ul>
+                <li><label>Nome: </label><br><input type="text" name="" id="nome-edit-input" class="edit-name"></li>
+                <li><label>Nome de Preferência: </label><br><input type="text" name="" id="nomePref-edit-input" class="edit-prefName"></li>
+                <li><label>Estado Civíl: </label><br><input type="text" name="" id="status-edit-input" class="edit-status"></li>
+                <li><label>RG: </label><br><input type="text" name="" id="rg-edit-input" class="edit-rg"></li>
+                <li><label>CPF: </label><br><input type="text" name="" id="cpf-edit-input" class="edit-cpf"></li>
+                <li><label>Cargo: </label><br><input type="text" name="" id="cargo-edit-input" class="edit-cargo"></li>
+                <li><label>Cargo Administrativo: </label><input type="text" name="" id="cargoAdm-edit-input" class="edit-cargoAdm"></li>
+                <li><label>Profissão: </label><br><input type="text" name="" id="profissao-edit-input" class="edit-profissao"></li>
+                <li><label>Data de Nascimento: </label><br><input type="text" name="" id="nascimento-edit-input" class="edit-nascimento"></li>
+                <li><label>Data de Batismo: </label><br><input type="text" name="" id="batismo-edit-input" class="edit-batismo"></li>
+                <li><label>Endereço: </label><br><input type="text" name="" id="endereco-edit-input" class="edit-endereço"></li>
+                <li><label>Contato: </label><br><input type="text" name="" id="contato-edit-input" class="edit-contato"></li>
+                <li><label>E-mail: </label><br><input type="text" name="" id="email-edit-input" class="edit-email"></li>
+            </ul>
+   </section>
     <script type="module" src="./script/data.js"></script>
 </body>
 </html>
