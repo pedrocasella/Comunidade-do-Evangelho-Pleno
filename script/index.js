@@ -33,7 +33,7 @@ get(child(dbRef, "birthday/")).then((snapshot) => {
     console.error(error);
 });
 
-setTimeout(()=>{
+setInterval(()=>{
   var date = new Date().getMonth() + 1
   if(date < 10){
     var month = '0' + date
@@ -45,7 +45,20 @@ setTimeout(()=>{
       snapshot.style.display = 'none'
     }
   })
-}, 1000*5)
+  
+  /*if(document.getElementById('birthday-person').innerHTML == ''){
+      document.getElementById('aviso').style.display = 'none'
+  }else{
+      document.getElementById('aviso').style.display = 'block'
+  }*/
+
+}, 1000*2)
+
+//open DA
+
+document.getElementById('da').addEventListener('click', ()=>{
+  window.open('admin.html')
+})
 
 
 

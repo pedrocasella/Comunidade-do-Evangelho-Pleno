@@ -10,8 +10,13 @@
     <title>Painel Administrativo</title>
 </head>
 <body>
+    <div class="header-background-color"></div>
+    <div class="header-background"></div>
     <header>
-        
+        <ul>
+            <li class="logo-header"></li>
+            <li class="subtitle">Departamento de Administração <br><span>Rio Pequeno</span></li>
+        </ul>
     </header>
     <nav>
         <center>
@@ -227,6 +232,8 @@
    <section class="edit-modal" id="edit-modal">
         <span id="close-edit">X</span>
             <ul>
+                <center><label for="photo-input" id="edit-photo-label" class="edit-photo-label"></label></center>
+                <input type="file" name="" class="photo-input" id="photo-input">
                 <li><label>Nome: </label><br><input type="text" name="" id="nome-edit-input" class="edit-name"></li>
                 <li><label>Nome de Preferência: </label><br><input type="text" name="" id="nomePref-edit-input" class="edit-prefName"></li>
                 <li><label>Estado Civíl: </label><br><input type="text" name="" id="status-edit-input" class="edit-status"></li>

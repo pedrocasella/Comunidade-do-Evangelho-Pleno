@@ -64,6 +64,29 @@ body{
     height: 85%;
 }
 
+.welcome-area ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.welcome-area ul li{
+    margin-right: 1rem;
+}
+
+.welcome-area ul .logo{
+    width: 120px;
+    height: 120px;
+    background-image: url(./../img/logo001.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.welcome-area ul .title{
+    padding: 0;
+    margin-top: .9rem;
+}
+
 .welcome-wave{
     position: absolute;
     top: 60%;
@@ -202,14 +225,177 @@ body{
     transform: translateY(-100%);
 }
 
-/* Social Media */
+.birthday-area .aviso{
+    display: none;
+    color: #ffffff;
+    margin-bottom: 4rem;
+    list-style: none;
+}
 
-.social-media{
+.birthday-area .aviso .cake{
+    width: 100px;
+    height: 100px;
+    background-image: url(./../icon/birthday.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* Proósito Area */
+
+.propósito-area{
     width: 100%;
-    height: 400px;
+    height: 900px;
     background-color: #ffffff;
 }
 
-.social-media h2{
+.propósito-area h2{
     padding: 2rem;
+}
+
+.propósito-area .img-proposito{
+    transform: translateY(3rem);
+    width: 620px;
+    height: 400px;
+    background-image: url(./../img/img001.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .8;
+}
+
+.propósito-area .text{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    transform: translate(500px, -320px);
+}
+
+.propósito-area .tags{
+    margin-top: 8rem;
+    display: inline-flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.propósito-area .tags li{
+    width: 200px;
+    height: 60px;
+}
+
+.propósito-area .tags .family{
+    background-image: url(./../img/somosfamilia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+.propósito-area .tags .focus{
+    background-image: url(./../img/focamosnoproximo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+.propósito-area .tags .continent{
+    background-image: url(./../img/conquistandocontinentes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+.propósito-area .tags .word{
+    background-image: url(./../img/foconapalavra.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+.propósito-area .tags .help{
+    background-image: url(./../img/nãodesistir.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+.israel-wave{
+    width: 100%;
+    height: 200px;
+    background-image: url(./../img/israel.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-200px);
+    position: absolute;
+}
+
+/*--------------*/
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 260px;
+    color: #ffffff;
+    background-color: rgba(14, 14, 14);
+}
+
+footer .links{
+    list-style: none;
+    padding: 2rem;
+    color: white;
+}
+
+footer .links li{
+    margin-top: .2rem;
+}
+
+footer .links li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer .links li a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+footer .cnpj{
+    margin-top: -1rem;
+}
+
+footer .icons{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+}
+
+footer .icons li{
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+footer .icons .instagram{
+    background-image: url(./../icon/instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer .icons .youtube{
+    background-image: url(./../icon/youtube.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer .icons .da{
+    width: 100px;
+    background-image: url(./../icon/da001.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -200,6 +200,7 @@ document.getElementById('geral-list').addEventListener('click', (e)=>{
       card.innerHTML = '<div class="front-data"><h2 class="title">Identificação Ministerial<hr></h2><ul class="name-ul"><li class="title-name">Nome:</li><li class="name">' + data.nome + '</li></ul><ul class="cargo-ul"><li class="cargo-title">Cargo:</li><li class="cargo">' + data.cargo + ' / ' + data.cargo_adm + '</li></ul><ul class="rg-ul"><li class="rg-title">Registro Geral:</li><li class="rg">' + data.rg + '</li></ul><ul class="cpf-ul"><li class="cpf-title">CPF:</li><li class="cpf">' + data.cpf + '</li></ul><ul class="nascimento-ul"><li class="nascimento-title">Data de Nascimento:</li><li class="nascimento">' + data.nascimento.replaceAll('-','/').split('/').reverse().join('/') + '</li></ul></div><div class="picture-area"><div class="barcode"></div><div class="cep-logo"></div><div class="picture-user" style="background-image: url(' + data.foto + ')"></div></div><div class="black-bar"></div>'
 
       //Edit Area
+      document.getElementById('edit-photo-label').style.backgroundImage = 'url(' + data.foto + ')'
       document.getElementById('nome-edit-input').value = data.nome
       document.getElementById('nomePref-edit-input').value = data.pref_nome
       document.getElementById('status-edit-input').value = data.status
