@@ -139,7 +139,6 @@ document.getElementById('removed-list').addEventListener('click', (e)=>{
       if (snapshot.exists()) {
         const data = snapshot.val()
         const db = getDatabase();
-        console.log(data)
 
         //log in system
         set(push(ref(db, 'logs/log_users')), {
@@ -197,7 +196,7 @@ document.getElementById('geral-list').addEventListener('click', (e)=>{
       const data = snapshot.val()
       const card = document.getElementById('id-card')
       const edit = document.getElementById('edit-modal')
-      card.innerHTML = '<div class="front-data"><h2 class="title">Identificação Ministerial<hr></h2><ul class="name-ul"><li class="title-name">Nome:</li><li class="name">' + data.nome + '</li></ul><ul class="cargo-ul"><li class="cargo-title">Cargo:</li><li class="cargo">' + data.cargo + ' / ' + data.cargo_adm + '</li></ul><ul class="rg-ul"><li class="rg-title">Registro Geral:</li><li class="rg">' + data.rg + '</li></ul><ul class="cpf-ul"><li class="cpf-title">CPF:</li><li class="cpf">' + data.cpf + '</li></ul><ul class="nascimento-ul"><li class="nascimento-title">Data de Nascimento:</li><li class="nascimento">' + data.nascimento.replaceAll('-','/').split('/').reverse().join('/') + '</li></ul></div><div class="picture-area"><div class="barcode"></div><div class="cep-logo"></div><div class="picture-user" style="background-image: url(' + data.foto + ')"></div></div><div class="black-bar"></div>'
+      card.innerHTML = '<div class="front-data"><h2 class="title">Identificação Ministerial<hr></h2><ul class="name-ul"><li class="title-name">Nome:</li><li class="name">' + data.nome + '</li></ul><ul class="cargo-ul"><li class="cargo-title">Cargo:</li><li class="cargo">' + data.cargo + ' / ' + data.cargo_adm + '</li></ul><ul class="rg-ul"><li class="rg-title">Registro Geral:</li><li class="rg">' + data.rg + '</li></ul><ul class="cpf-ul"><li class="cpf-title">CPF:</li><li class="cpf">' + data.cpf + '</li></ul><ul class="nascimento-ul"><li class="nascimento-title">Data de Nascimento:</li><li class="nascimento">' + data.nascimento.replaceAll('-','/').split('/').reverse().join('/') + '</li></ul></div><div class="picture-area"><img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=' + 'Nome: ' + data.nome + ' Estado Civil: ' + data.status + ' RG: ' + data.rg + ' CPF: ' + data.cpf + ' Cargo: ' + data.cargo + ' Cargo Administrativo: ' + data.cargo_adm + '" alt="" class="qrcode"><div class="cep-logo"></div><div class="picture-user" style="background-image: url(' + data.foto + ')"></div></div><div class="black-bar"></div>'
 
       //Edit Area
       document.getElementById('edit-photo-label').style.backgroundImage = 'url(' + data.foto + ')'
@@ -293,6 +292,13 @@ document.getElementById('close').addEventListener('click', ()=>{
 
 document.getElementById('false').addEventListener('click', ()=>{
   document.getElementById('delete-modal').style.display = 'none'
+  document.getElementById('background-black').style.display = 'none' 
+})
+
+//Close log area
+
+document.getElementById('close-log').addEventListener('click', ()=>{
+  document.getElementById('logs').style.display = 'none'
   document.getElementById('background-black').style.display = 'none' 
 })
 
@@ -396,3 +402,16 @@ get(child(dbRef, "birthday/")).then((snapshot) => {
     })
 
 
+//log area
+get(child(dbRef, "logs/log_users")).then((snapshot) => {
+  if (snapshot.exists()) {
+      snapshot.forEach((childSnapchot)=>{
+        const data = childSnapchot.val()
+        document.getElementById('logs_ul').innerHTML += '<li>' + data.log + '</li><hr>'
+      })
+  } else {
+      
+  }
+  }).catch((error) => {
+  console.error(error);
+});

@@ -54,10 +54,20 @@ setInterval(()=>{
 
 }, 1000*2)
 
+//copy location
+document.getElementById('title_copy').addEventListener('click', ()=>{
+  navigator.clipboard.writeText(document.getElementById('location_div').innerText)
+  //confirmation animation
+  document.getElementById('title_copy').innerHTML = '<code>&#10003;</code>'
+  setTimeout(()=>{
+    document.getElementById('title_copy').innerHTML = 'Copiar'
+  },1000*1)
+})
+
 //open DA
 
 document.getElementById('da').addEventListener('click', ()=>{
-  window.open('admin.html')
+  window.open('login.html')
 })
 
 

@@ -105,4 +105,12 @@ function editWindow(){
     }, 1000*1)
 }
 
+//open users log
 
+function openLogUsers(){
+    setTimeout(()=>{
+        document.getElementById('logs').style.display = 'block'
+        document.getElementById('background-black').style.display = 'block'
+        document.getElementById('close').style.display = 'none'
+    }, 1000*1)
+}

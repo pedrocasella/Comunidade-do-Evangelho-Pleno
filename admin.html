@@ -215,7 +215,7 @@
    <!-- Log Area -->
    <section class="log-area" id="log-area">
         <ul class="log-ul">
-            <li class="log-users" id="log-uses">
+            <li class="log-users" id="log-uses" onclick="openLogUsers()">
                 <ul class="elements">
                     <li class="title"><h2><span class="icon"></span>Log de Membros da Igreja</h2></li>
                     <li><span>Registros de inserção, ativação e desativação de membros da igreja. (Não editável)</span></li>
@@ -249,6 +249,16 @@
                 <li><label>E-mail: </label><br><input type="text" name="" id="email-edit-input" class="edit-email"></li>
             </ul>
    </section>
+   <!---------------------->
+
+   <!-- Log cad area -->
+   <div class="logs" id="logs">
+        <span class="close-log" id="close-log">X</span>
+        <center><h4>Registros do Sistema</h4></center>
+        <ul class="logs_ul" id="logs_ul">
+            
+        </ul>
+   </div>
     <script type="module" src="./script/data.js"></script>
 </body>
 </html>

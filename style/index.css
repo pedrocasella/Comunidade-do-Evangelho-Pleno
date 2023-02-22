@@ -168,6 +168,35 @@ body{
     border-bottom-style: none;
 }
 
+.location-area .copy-location{
+    list-style: none;
+    display: inline-flex;
+}
+
+.location-area .copy-location .title_copy{
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    background-color: #161616;
+    color: #ffffff;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.location-area .copy-location .title_copy:hover{
+    cursor: pointer;
+    transition: linear .3s;
+    background-color: #2e2e2e;
+}
+
+.location-area .copy-location .location_div{
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
 /* Birthday Area */
 
 .birthday-area{

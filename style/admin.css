@@ -737,6 +737,10 @@ nav ul li:hover{
 .id-card .front-data .nascimento-ul .nascimento-title{
     font-weight: bolder;
 }
+.qrcode{
+    position: absolute;
+    transform: translate(80px, 295px);
+}
 
 .black-bar{
     position: absolute;
@@ -1002,6 +1006,8 @@ nav ul li:hover{
 
 /* Log Area */
 
+
+
 .log-area{
     width: 100%;
     height: auto;
@@ -1154,3 +1160,42 @@ nav ul li:hover{
   }
 
 /*----------------*/
+
+/* Logs Area */
+
+.logs{
+    width: 400px;
+    height: 500px;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    border-radius: 30px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+    animation: openUp .3s ease-in;
+    z-index: 4;
+}
+
+.logs .close-log{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 90%;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+}
+
+.logs h4{
+    margin-top: 2rem;
+}
+
+.logs .logs_ul{
+    list-style: none;
+    margin: 2rem;
+}
+
+.logs .logs_ul li{
+    margin: 1rem 0rem 1rem 0rem;
+}
