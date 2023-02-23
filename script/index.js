@@ -41,7 +41,7 @@ setInterval(()=>{
     var month = date + ''
   }
   document.querySelectorAll('.info-ul').forEach((snapshot)=>{
-    if(snapshot.innerHTML.indexOf('/' + month + '/') == -1){
+    if(snapshot.innerHTML.indexOf('/' + month + '/') != -1){
       snapshot.style.display = 'none'
     }
   })
@@ -52,7 +52,7 @@ setInterval(()=>{
       document.getElementById('aviso').style.display = 'block'
   }*/
 
-}, 1000*2)
+}, 1000*1)
 
 //copy location
 document.getElementById('title_copy').addEventListener('click', ()=>{
