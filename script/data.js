@@ -1,6 +1,6 @@
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getDatabase, set, push, ref, get, child, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  import { getDatabase, set, push, ref, get, child, remove, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDlo3_M6Ko34ZCjI-PPk17wcOZxrUA33Pc",
@@ -220,6 +220,45 @@ document.getElementById('geral-list').addEventListener('click', (e)=>{
     }).catch((error) => {
     console.error(error);
     });
+
+          //update database
+          document.getElementById('edit_btn').addEventListener('click', ()=>{
+            const db = getDatabase();
+            const foto = document.getElementById('edit-photo-label').style.backgroundImage.replace('url(', '').replace(')', '').replaceAll('"', '')
+            const nome = document.getElementById('nome-edit-input').value
+            const prefName = document.getElementById('nomePref-edit-input').value
+            const status = document.getElementById('nomePref-edit-input').value
+            const rg = document.getElementById('rg-edit-input').value
+            const cpf = document.getElementById('cpf-edit-input').value
+            const cargo = document.getElementById('cargo-edit-input').value
+            const cargoAdm = document.getElementById('cargoAdm-edit-input').value
+            const profissao = document.getElementById('profissao-edit-input').value
+            const nascimento = document.getElementById('nascimento-edit-input').value
+            const batismo = document.getElementById('batismo-edit-input').value
+            const endereco = document.getElementById('endereco-edit-input').value
+            const contato = document.getElementById('contato-edit-input').value
+            const email = document.getElementById('email-edit-input').value
+    
+            update(ref(db, 'user/' + userId + '/'), {
+                foto: foto,
+                nome: nome,
+                pref_nome: prefName,
+                status: status,
+                rg: rg,
+                cpf: cpf,
+                cargo: cargo,
+                cargo_adm: cargoAdm,
+                profissao: profissao,
+                nascimento: nascimento,
+                batismo: batismo,
+                endereco: endereco,
+                contato: contato,
+                email: email,
+            }).then(()=>{
+              setTimeout(()=>{window.location.reload()}, 1000*2)
+            })
+    
+          })
   
     document.getElementById('confirm-delete').innerHTML = '<div class="true" id="' + userId + '">Sim</div>'
 
@@ -280,6 +319,8 @@ document.getElementById('geral-list').addEventListener('click', (e)=>{
 
       //console.clear()
 })
+
+
 
 //Close ID Card
 
